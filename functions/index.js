@@ -1,8 +1,4 @@
-
-
-
-
-document.querySelectorAll('input[name], #formula').forEach(function (input) {
+document.querySelectorAll('input[name], #formula, #condition').forEach(function (input) {
 	input.addEventListener('keyup', function () {
 		var data = {};
 
@@ -23,6 +19,20 @@ document.querySelectorAll('input[name], #formula').forEach(function (input) {
 			console.error(error.message);
 		}
 
+		const condition = document.getElementById('condition');
+
+		try {
+			const calculator = new Function('cells', 'with (cells) { return ' + condition.value + ';}');
+
+			if (calculator(data)) {
+				result.style.backgroundColor = '#B6D7A8';
+			} else {
+				result.style.backgroundColor = '#FFFFFF'
+			}
+		} catch (error) {
+			result.value = '#ERROR';
+			console.info(error.message);
+		}
 
 	});
 });
