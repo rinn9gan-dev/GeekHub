@@ -9,20 +9,20 @@
 <body>
 
 <div class="container p-5">
-	<form id="user-form">
+	<form id="user-form" autocomplete="off">
 		<div class="form-group">
 			<label>П.І.Б.</label>
-			<input type="text" name="full_name" class="form-control"/>
+			<input type="text" name="full_name" class="form-control" id="name"/>
 			<small class="form-text text-muted">Обовʼязково прізвище, імʼя та по батькові. Тільки літерами українскього алфавіту</small>
 		</div>
 		<div class="form-group">
 			<label>Email</label>
-			<input type="text" name="email" class="form-control"/>
+			<input type="text" name="email" class="form-control" id="email"/>
 			<small class="form-text text-muted">Адреса електронної пошти</small>
 		</div>
 		<div class="form-group">
 			<label>Пароль</label>
-			<input type="password" name="password" class="form-control"/>
+			<input type="password" name="password" class="form-control" id="password"/>
 			<small class="form-text text-muted">Мінімум 8 літер. Обовʼязково повинні бути великі та малі літери англійського алфавіту та числа</small>
 		</div>
 
