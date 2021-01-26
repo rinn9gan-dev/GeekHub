@@ -61,20 +61,6 @@ const processText = (text) => {
 
 const table = document.getElementById('table');
 
-// const createTable = (table, arrayText) => {
-// 	for (let i = 0; i < arrayText.length; i++) {
-// 		const tr = document.createElement('tr');
-//
-// 		for (let j = 0; j < arrayText[i].length; j++){
-// 			const td = document.createElement('td');
-// 			td.innerHTML = arrayText[i][j];
-//
-// 			tr.appendChild(td);
-// 		}
-// 		table.appendChild(tr);
-// 	}
-// };
-
 const removeAllChildNodes = () => {
 	while (table.firstChild) {
 		table.removeChild(table.firstChild);
@@ -122,7 +108,6 @@ const createTbody = (arrayText) => {
 
 		tBody.appendChild(tR);
 	});
-
 
 	return tBody;
 }
